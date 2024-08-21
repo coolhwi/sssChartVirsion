@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lbServiceTimes = new System.Windows.Forms.Label();
@@ -43,15 +43,15 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chBtGrapch = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chQtGrapch = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbBT = new System.Windows.Forms.Label();
-            this.lbQT = new System.Windows.Forms.Label();
+            this.lbAreaUnderBT = new System.Windows.Forms.Label();
+            this.lbAreaUnderQT = new System.Windows.Forms.Label();
             this.lbTotalWaitingTime = new System.Windows.Forms.Label();
             this.lbWokingNum = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,17 +61,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lb = new System.Windows.Forms.Label();
-            this.lbQ = new System.Windows.Forms.Label();
-            this.lbB = new System.Windows.Forms.Label();
+            this.lbArrTimeInQueue = new System.Windows.Forms.Label();
+            this.lbQT = new System.Windows.Forms.Label();
+            this.lbBT = new System.Windows.Forms.Label();
             this.lbCurClock = new System.Windows.Forms.Label();
             this.lbSystemState = new System.Windows.Forms.Label();
             this.dgViewCalendarInfo = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chBtGrapch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chQtGrapch)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewCalendarInfo)).BeginInit();
@@ -171,8 +171,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.Controls.Add(this.label15, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label16, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chart2, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.chart1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.chBtGrapch, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.chQtGrapch, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 211);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -205,39 +205,39 @@
             this.label16.Text = "B(t) graph";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // chart2
+            // chBtGrapch
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
-            this.chart2.Location = new System.Drawing.Point(199, 157);
-            this.chart2.Name = "chart2";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart2.Series.Add(series3);
-            this.chart2.Size = new System.Drawing.Size(779, 98);
-            this.chart2.TabIndex = 4;
-            this.chart2.Text = "chart2";
+            chartArea1.Name = "ChartArea1";
+            this.chBtGrapch.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chBtGrapch.Legends.Add(legend1);
+            this.chBtGrapch.Location = new System.Drawing.Point(199, 157);
+            this.chBtGrapch.Name = "chBtGrapch";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chBtGrapch.Series.Add(series1);
+            this.chBtGrapch.Size = new System.Drawing.Size(779, 98);
+            this.chBtGrapch.TabIndex = 4;
+            this.chBtGrapch.Text = "chart2";
             // 
-            // chart1
+            // chQtGrapch
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(199, 3);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(779, 148);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.chQtGrapch.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chQtGrapch.Legends.Add(legend2);
+            this.chQtGrapch.Location = new System.Drawing.Point(199, 3);
+            this.chQtGrapch.Name = "chQtGrapch";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chQtGrapch.Series.Add(series2);
+            this.chQtGrapch.Size = new System.Drawing.Size(779, 148);
+            this.chQtGrapch.TabIndex = 3;
+            this.chQtGrapch.Text = "chart1";
             // 
             // label14
             // 
@@ -286,8 +286,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.lbBT, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbQT, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbAreaUnderBT, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbAreaUnderQT, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbTotalWaitingTime, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbWokingNum, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 162);
@@ -297,29 +297,29 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(981, 43);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // lbBT
+            // lbAreaUnderBT
             // 
-            this.lbBT.AutoSize = true;
-            this.lbBT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbBT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbBT.Location = new System.Drawing.Point(738, 0);
-            this.lbBT.Name = "lbBT";
-            this.lbBT.Size = new System.Drawing.Size(240, 43);
-            this.lbBT.TabIndex = 4;
-            this.lbBT.Text = "0";
-            this.lbBT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAreaUnderBT.AutoSize = true;
+            this.lbAreaUnderBT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAreaUnderBT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAreaUnderBT.Location = new System.Drawing.Point(738, 0);
+            this.lbAreaUnderBT.Name = "lbAreaUnderBT";
+            this.lbAreaUnderBT.Size = new System.Drawing.Size(240, 43);
+            this.lbAreaUnderBT.TabIndex = 4;
+            this.lbAreaUnderBT.Text = "0";
+            this.lbAreaUnderBT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbQT
+            // lbAreaUnderQT
             // 
-            this.lbQT.AutoSize = true;
-            this.lbQT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbQT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbQT.Location = new System.Drawing.Point(493, 0);
-            this.lbQT.Name = "lbQT";
-            this.lbQT.Size = new System.Drawing.Size(239, 43);
-            this.lbQT.TabIndex = 3;
-            this.lbQT.Text = "0";
-            this.lbQT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAreaUnderQT.AutoSize = true;
+            this.lbAreaUnderQT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAreaUnderQT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAreaUnderQT.Location = new System.Drawing.Point(493, 0);
+            this.lbAreaUnderQT.Name = "lbAreaUnderQT";
+            this.lbAreaUnderQT.Size = new System.Drawing.Size(239, 43);
+            this.lbAreaUnderQT.TabIndex = 3;
+            this.lbAreaUnderQT.Text = "0";
+            this.lbAreaUnderQT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTotalWaitingTime
             // 
@@ -414,9 +414,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.lb, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbQ, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbB, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbArrTimeInQueue, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbQT, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lbBT, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbCurClock, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbSystemState, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgViewCalendarInfo, 5, 0);
@@ -427,41 +427,41 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(981, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lb
+            // lbArrTimeInQueue
             // 
-            this.lb.AutoSize = true;
-            this.lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lb.Location = new System.Drawing.Point(493, 0);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(239, 100);
-            this.lb.TabIndex = 4;
-            this.lb.Text = "<empty>";
-            this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbArrTimeInQueue.AutoSize = true;
+            this.lbArrTimeInQueue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbArrTimeInQueue.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbArrTimeInQueue.Location = new System.Drawing.Point(493, 0);
+            this.lbArrTimeInQueue.Name = "lbArrTimeInQueue";
+            this.lbArrTimeInQueue.Size = new System.Drawing.Size(239, 100);
+            this.lbArrTimeInQueue.TabIndex = 4;
+            this.lbArrTimeInQueue.Text = "<empty>";
+            this.lbArrTimeInQueue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbQ
+            // lbQT
             // 
-            this.lbQ.AutoSize = true;
-            this.lbQ.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbQ.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbQ.Location = new System.Drawing.Point(395, 0);
-            this.lbQ.Name = "lbQ";
-            this.lbQ.Size = new System.Drawing.Size(92, 100);
-            this.lbQ.TabIndex = 3;
-            this.lbQ.Text = "0";
-            this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbQT.AutoSize = true;
+            this.lbQT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbQT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbQT.Location = new System.Drawing.Point(395, 0);
+            this.lbQT.Name = "lbQT";
+            this.lbQT.Size = new System.Drawing.Size(92, 100);
+            this.lbQT.TabIndex = 3;
+            this.lbQT.Text = "0";
+            this.lbQT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbB
+            // lbBT
             // 
-            this.lbB.AutoSize = true;
-            this.lbB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbB.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbB.Location = new System.Drawing.Point(297, 0);
-            this.lbB.Name = "lbB";
-            this.lbB.Size = new System.Drawing.Size(92, 100);
-            this.lbB.TabIndex = 2;
-            this.lbB.Text = "0";
-            this.lbB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbBT.AutoSize = true;
+            this.lbBT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbBT.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbBT.Location = new System.Drawing.Point(297, 0);
+            this.lbBT.Name = "lbBT";
+            this.lbBT.Size = new System.Drawing.Size(92, 100);
+            this.lbBT.TabIndex = 2;
+            this.lbBT.Text = "0";
+            this.lbBT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCurClock
             // 
@@ -511,8 +511,8 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chBtGrapch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chQtGrapch)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -532,9 +532,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lb;
-        private System.Windows.Forms.Label lbQ;
-        private System.Windows.Forms.Label lbB;
+        private System.Windows.Forms.Label lbArrTimeInQueue;
+        private System.Windows.Forms.Label lbQT;
+        private System.Windows.Forms.Label lbBT;
         private System.Windows.Forms.Label lbCurClock;
         private System.Windows.Forms.Label lbSystemState;
         private System.Windows.Forms.Label label14;
@@ -543,8 +543,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.DataGridView dgViewCalendarInfo;
-        private System.Windows.Forms.Label lbBT;
-        private System.Windows.Forms.Label lbQT;
+        private System.Windows.Forms.Label lbAreaUnderBT;
+        private System.Windows.Forms.Label lbAreaUnderQT;
         private System.Windows.Forms.Label lbTotalWaitingTime;
         private System.Windows.Forms.Label lbWokingNum;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -553,8 +553,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chBtGrapch;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chQtGrapch;
         private System.Windows.Forms.Label lbServiceTimes;
         private System.Windows.Forms.Label lbInterArrTimes;
     }
