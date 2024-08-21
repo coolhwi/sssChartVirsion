@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sssChartVirsion", "sssChartVirsion\sssChartVirsion.csproj", "{A95BDA3D-AB5D-4737-8659-46678ACE6C1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A95BDA3D-AB5D-4737-8659-46678ACE6C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95BDA3D-AB5D-4737-8659-46678ACE6C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95BDA3D-AB5D-4737-8659-46678ACE6C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95BDA3D-AB5D-4737-8659-46678ACE6C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {797DE7C0-A8FD-4723-9A36-6B0FAF25B2CE}
+	EndGlobalSection
+EndGlobal
