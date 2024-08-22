@@ -66,7 +66,9 @@
             this.lbBT = new System.Windows.Forms.Label();
             this.lbCurClock = new System.Windows.Forms.Label();
             this.lbSystemState = new System.Windows.Forms.Label();
-            this.dgViewCalendarInfo = new System.Windows.Forms.DataGridView();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnAllStep = new System.Windows.Forms.Button();
+            this.lbEventCalendar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -74,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chQtGrapch)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewCalendarInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -149,7 +150,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(190, 44);
             this.label17.TabIndex = 3;
-            this.label17.Text = "System";
+            this.label17.Text = "Interarrival times";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
@@ -161,7 +162,7 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(190, 45);
             this.label18.TabIndex = 4;
-            this.label18.Text = "System";
+            this.label18.Text = "Service times";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
@@ -414,12 +415,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.lbEventCalendar, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbArrTimeInQueue, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbQT, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbBT, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbCurClock, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbSystemState, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dgViewCalendarInfo, 5, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(42, 50);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -487,24 +488,49 @@
             this.lbSystemState.Text = "SystemState";
             this.lbSystemState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgViewCalendarInfo
+            // btnNext
             // 
-            this.dgViewCalendarInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgViewCalendarInfo.Location = new System.Drawing.Point(738, 3);
-            this.dgViewCalendarInfo.Name = "dgViewCalendarInfo";
-            this.dgViewCalendarInfo.RowTemplate.Height = 23;
-            this.dgViewCalendarInfo.Size = new System.Drawing.Size(240, 94);
-            this.dgViewCalendarInfo.TabIndex = 5;
+            this.btnNext.Location = new System.Drawing.Point(1034, 22);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 34);
+            this.btnNext.TabIndex = 1;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnAllStep
+            // 
+            this.btnAllStep.Location = new System.Drawing.Point(1035, 62);
+            this.btnAllStep.Name = "btnAllStep";
+            this.btnAllStep.Size = new System.Drawing.Size(75, 34);
+            this.btnAllStep.TabIndex = 2;
+            this.btnAllStep.Text = "AllStep";
+            this.btnAllStep.UseVisualStyleBackColor = true;
+            // 
+            // lbEventCalendar
+            // 
+            this.lbEventCalendar.AutoSize = true;
+            this.lbEventCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbEventCalendar.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbEventCalendar.Location = new System.Drawing.Point(738, 0);
+            this.lbEventCalendar.Name = "lbEventCalendar";
+            this.lbEventCalendar.Size = new System.Drawing.Size(240, 100);
+            this.lbEventCalendar.TabIndex = 5;
+            this.lbEventCalendar.Text = "[empty]";
+            this.lbEventCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 616);
+            this.Controls.Add(this.btnAllStep);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -517,7 +543,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgViewCalendarInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -542,7 +567,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dgViewCalendarInfo;
         private System.Windows.Forms.Label lbAreaUnderBT;
         private System.Windows.Forms.Label lbAreaUnderQT;
         private System.Windows.Forms.Label lbTotalWaitingTime;
@@ -557,6 +581,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chQtGrapch;
         private System.Windows.Forms.Label lbServiceTimes;
         private System.Windows.Forms.Label lbInterArrTimes;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnAllStep;
+        private System.Windows.Forms.Label lbEventCalendar;
     }
 }
 

@@ -11,14 +11,15 @@ namespace sssChartVirsion
         None,
         Arr,
         Load,
-        Unload
+        Unload,
+        End
     }
     internal class Event
     {
-        public EventType type = EventType.None;
-        public readonly string name;
+        public EventType type { get; set; }
+        public string name { get; set; }
+        public double time { get; set; }
 
-        public double time;
         public double interArrTime;
 
         public Event(EventType type, string name, double time)
