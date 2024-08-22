@@ -135,6 +135,8 @@ namespace sssChartVirsion
             double serviceTime = _serviceTimes[s];
             serviceTime = Math.Round(serviceTime, 2);
             s++;
+            _recordServiceTimes.Add(serviceTime);
+
             _q = _q - 1;
 
             _m = true;
@@ -144,6 +146,7 @@ namespace sssChartVirsion
 
             //waitTime 구하기
             _totalWaitTime += _now - selectEvent.time;
+            lbWokingNum.Text = selectEvent.name;
             RefreshView();
         }
         void RunUnloadEvent(Event selectEvent)
@@ -164,6 +167,8 @@ namespace sssChartVirsion
                 return;
             }
 
+            RefreshView();
+
         }
 
         Event GenerateEvent()
@@ -171,6 +176,7 @@ namespace sssChartVirsion
             double interArrTime = _interArrTimes[i];
             i++;
             interArrTime = Math.Round(interArrTime, 2);
+            _recordInterArrTimes.Add(interArrTime);
 
             //double interArrTime = _random.NextDouble() * 10;
             //interArrTime = Math.Round(interArrTime, 2);
@@ -237,6 +243,7 @@ namespace sssChartVirsion
             ShowInterAndServiceTime();
             ShowEventCalender();
             ShowChart();
+            ShowArrTimeQue();
         }
 
         private void ShowEventCalender()
@@ -250,6 +257,25 @@ namespace sssChartVirsion
             }
 
             lbEventCalendar.Text = eventCalenderEvent;
+        }
+
+        private void ShowArrTimeQue()
+        {
+            string arrTimeInQue = "";
+
+            foreach (double d in _arrTimeQue)
+            {
+                string s = $" {d} ";
+                arrTimeInQue = s + arrTimeInQue;
+            }
+            arrTimeInQue = "(" + arrTimeInQue + ")";
+
+            if(_arrTimeQue.Count == 0)
+            {
+                arrTimeInQue = "<empty>";
+            }
+
+            lbArrTimeInQueue.Text = arrTimeInQue;
         }
 
         private void ShowUnloadAndNotQueGraph()
@@ -272,40 +298,6 @@ namespace sssChartVirsion
 
         }
 
-        private void ShowLoadChart()
-        {
-            if (chQtGrapch.Series[0].Points.Count == 20 && chBtGrapch.Series[0].Points.Count == 20)
-            {
-                return;
-            }
-
-            if (chQtGrapch.IsHandleCreated && chBtGrapch.IsHandleCreated)
-            {
-                this.Invoke((MethodInvoker)delegate { GenerateLoadNum(); });
-            }
-
-        }
-
-        private void GenerateLoadNum()
-        {
-            
-            chQtGrapch.Series[0].Points.AddXY(_curTime, _q + 1);
-            chQtGrapch.Series[0].Points.AddXY(_curTime, _q);
-
-
-            if (!_prevM)
-            {
-                chBtGrapch.Series[0].Points.AddXY(_curTime, 0);
-            }
-
-            if (_m)
-            {
-                chBtGrapch.Series[0].Points.AddXY(_curTime, 1);
-                return;
-            }
-            chBtGrapch.Series[0].Points.AddXY(_curTime, 0);
-        }
-
         private void GenerateNum()
         {
             if (_endFlag)
@@ -321,14 +313,7 @@ namespace sssChartVirsion
                 return;
             }
 
-            //if (_q != 0)
-            //{
-            //    chQtGrapch.Series[0].Points.AddXY(_curTime, _q-1);
-            //}
-            //else
-            //{
-            //    chQtGrapch.Series[0].Points.AddXY(_curTime, 0);
-            //}
+
             chQtGrapch.Series[0].Points.AddXY(_curTime,_q);
 
             if (_m)
@@ -366,7 +351,21 @@ namespace sssChartVirsion
 
         private void ShowInterAndServiceTime()
         {
+            string totalInterArrTime = "";
+            string totalServiceTime = "";
 
+            foreach(double a in _recordInterArrTimes)
+            {
+                totalInterArrTime = totalInterArrTime + "  "+ a;
+            }
+
+            foreach (double s in _recordServiceTimes)
+            {
+                totalServiceTime = totalServiceTime + "  " + s;
+            }
+
+            lbInterArrTimes.Text = totalInterArrTime;
+            lbServiceTimes.Text = totalServiceTime;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
