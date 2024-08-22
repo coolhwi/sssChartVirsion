@@ -61,6 +61,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbEventCalendar = new System.Windows.Forms.Label();
             this.lbArrTimeInQueue = new System.Windows.Forms.Label();
             this.lbQT = new System.Windows.Forms.Label();
             this.lbBT = new System.Windows.Forms.Label();
@@ -68,7 +69,6 @@
             this.lbSystemState = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnAllStep = new System.Windows.Forms.Button();
-            this.lbEventCalendar = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -215,7 +215,7 @@
             this.chBtGrapch.Location = new System.Drawing.Point(199, 157);
             this.chBtGrapch.Name = "chBtGrapch";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chBtGrapch.Series.Add(series1);
@@ -232,7 +232,7 @@
             this.chQtGrapch.Location = new System.Drawing.Point(199, 3);
             this.chQtGrapch.Name = "chQtGrapch";
             series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StepLine;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chQtGrapch.Series.Add(series2);
@@ -428,6 +428,18 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(981, 100);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // lbEventCalendar
+            // 
+            this.lbEventCalendar.AutoSize = true;
+            this.lbEventCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbEventCalendar.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbEventCalendar.Location = new System.Drawing.Point(738, 0);
+            this.lbEventCalendar.Name = "lbEventCalendar";
+            this.lbEventCalendar.Size = new System.Drawing.Size(240, 100);
+            this.lbEventCalendar.TabIndex = 5;
+            this.lbEventCalendar.Text = "[empty]";
+            this.lbEventCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbArrTimeInQueue
             // 
             this.lbArrTimeInQueue.AutoSize = true;
@@ -506,18 +518,6 @@
             this.btnAllStep.TabIndex = 2;
             this.btnAllStep.Text = "AllStep";
             this.btnAllStep.UseVisualStyleBackColor = true;
-            // 
-            // lbEventCalendar
-            // 
-            this.lbEventCalendar.AutoSize = true;
-            this.lbEventCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbEventCalendar.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbEventCalendar.Location = new System.Drawing.Point(738, 0);
-            this.lbEventCalendar.Name = "lbEventCalendar";
-            this.lbEventCalendar.Size = new System.Drawing.Size(240, 100);
-            this.lbEventCalendar.TabIndex = 5;
-            this.lbEventCalendar.Text = "[empty]";
-            this.lbEventCalendar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

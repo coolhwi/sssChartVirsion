@@ -125,7 +125,6 @@ namespace sssChartVirsion
             _eventCalender.InputEvent(GenerateEvent());
 
             RefreshView();
-            ShowChart();
         }
 
         void RunLoadEvent(Event selectEvent)
@@ -146,7 +145,6 @@ namespace sssChartVirsion
             //waitTime 구하기
             _totalWaitTime += _now - selectEvent.time;
             RefreshView();
-            ShowLoadChart();
         }
         void RunUnloadEvent(Event selectEvent)
         {
@@ -165,8 +163,6 @@ namespace sssChartVirsion
                 RunLoadEvent(loadEventt);
                 return;
             }
-
-            ShowUnloadAndNotQueGraph();
 
         }
 
@@ -240,7 +236,7 @@ namespace sssChartVirsion
             ShowKPI();
             ShowInterAndServiceTime();
             ShowEventCalender();
-
+            ShowChart();
         }
 
         private void ShowEventCalender()
@@ -325,14 +321,14 @@ namespace sssChartVirsion
                 return;
             }
 
-            if (_q != 0)
-            {
-                chQtGrapch.Series[0].Points.AddXY(_curTime, _q-1);
-            }
-            else
-            {
-                chQtGrapch.Series[0].Points.AddXY(_curTime, 0);
-            }
+            //if (_q != 0)
+            //{
+            //    chQtGrapch.Series[0].Points.AddXY(_curTime, _q-1);
+            //}
+            //else
+            //{
+            //    chQtGrapch.Series[0].Points.AddXY(_curTime, 0);
+            //}
             chQtGrapch.Series[0].Points.AddXY(_curTime,_q);
 
             if (_m)
